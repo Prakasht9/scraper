@@ -10,11 +10,21 @@ def scraper
 
 
   images = parsed_page.xpath('//img').map do |img|
-    # puts "Header: #{img.xpath('preceding::h2[1]').text}"
     puts "  Image: #{img['src']}"
     img['src']
   end
   images
+
+  # images_count = x
+  # if images.length == x
+  #   puts "Length pass"
+  # end
+
+  # image_x = some_image
+  # if images.include?(some_image)
+  #   puts "Pass Existance"
+  # end
+  
 end
 
 scraper
